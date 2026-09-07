@@ -1,0 +1,116 @@
+:root {
+    --user-color: rgb(234, 255, 0); 
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+.center {
+    text-align: center;
+}
+
+.center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@font-face {
+    font-family: "MajorMonoDisplay";
+    src: url("../assets/fonts/MajorMonoDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: "GlacialIndifferenceB";
+    src: url("../assets/fonts/GlacialIndifference-Bold.otf");
+}
+
+@font-face {
+    font-family: "GlacialIndifference";
+    src: url("../assets/fonts/GlacialIndifference-Regular.otf");
+}
+
+img {
+    min-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bg {
+    position: relative;
+    isolation: isolate;
+    padding: 40px;
+}
+
+.bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    height: 40vh;
+
+    background-image: url("../assets/img/DX.png");
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    opacity: 0.4;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        padding: 40px;
+    }
+    img {
+        min-width: 50%;
+        height: auto;
+        display: block;
+    }
+    .bg::before {
+        min-height: 60vh;
+    }
+}
+
+h2 {
+    font-family: "GlacialIndifference";
+    color: var(--user-color);
+}
+
+h1, h3, h4, h5, h6 {
+    font-family: "MajorMonoDisplay";
+    color: var(--user-color);
+}
+
+p {
+    font-family: "GlacialIndifference";
+    color: var(--user-color);
+}
+
+.info {
+    font-family: "GlacialIndifference";
+}
+
+.card {
+    background: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 5px solid var(--user-color); 
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--user-color); 
+    font-family: "GlacialIndifferenceB";
+}
